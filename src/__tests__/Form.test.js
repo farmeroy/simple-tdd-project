@@ -41,4 +41,14 @@ describe("<Form />", () => {
     expect(label).toBeInTheDocument();
   })
 
+  test("Render an error message for all invalid input fields if all fields are empty and submit button is pushed", () => {
+    render(<Form />)
+    const button = screen.getByRole('button');
+    userEvent.click(button);
+    expect(screen.getByText(/username field is required/i)).toBeInTheDocument();
+    expect(screen.getByText(/first name field is required/i)).toBeInTheDocument();
+    expect(screen.getByText(/username field is required/i)).toBeInTheDocument();
+    expect(screen.getByText(/email field is required/i)).toBeInTheDocument();
+  })
+
 })
