@@ -9,7 +9,15 @@ const Form = () => {
           <label htmlFor='email'>Email</label>
           <input type='email' id='email'/>
         </div>
-        <button>Login</button>
+        <div>
+          <label htmlFor="firstname">First Name:</label>
+          <input type='text' id='firstname' />
+        </div>
+        <div>
+          <label htmlFor="lastname">Last Name:</label>
+          <input type='text' id='lastname' />
+        </div>
+        <button>Sign Up</button>
       </form>
   )
 }
